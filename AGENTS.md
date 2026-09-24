@@ -35,45 +35,13 @@ When a target project already defines a Design System or theme/token source of t
 
 If future versions add `assets/`, `scripts/`, or `tests/`, they are part of the Skill only when they are genuinely reusable and do not encode one project's visual answer.
 
-## Maintained Source & Public Mirror
+## Public Repository Maintenance
 
-The maintained private source is:
+Keep this repository self-contained for public users.
 
-```text
-ai-config/.agents/skills/design-svg-logo-pack/
-```
+When updating the Skill, review `SKILL.md`, `agents/`, `references/`, and any future Skill-owned support folders together so relative references remain valid.
 
-This public repository mirrors the reusable Skill files at repository root:
-
-```text
-SKILL.md
-agents/
-references/
-assets/      # when present
-scripts/     # when present
-tests/       # when present
-```
-
-Do not overwrite repository-owned files during a Skill sync:
-
-```text
-README.md
-AGENTS.md
-LICENSE
-```
-
-When the Skill contract changes, update public documentation separately if the user-facing explanation or installation steps also need to change.
-
-## Sync Checklist
-
-When syncing from the maintained source:
-
-1. copy only the Skill-owned paths;
-2. review the complete diff;
-3. confirm no private or environment-specific content was introduced;
-4. verify references and relative paths still resolve from the public repository root;
-5. update README only when the public behavior or usage changed;
-6. commit with a message that describes the actual Skill change.
+Repository-owned public documentation such as `README.md`, `AGENTS.md`, and `LICENSE` should be reviewed separately when behavior or installation guidance changes.
 
 ## Source Language
 
